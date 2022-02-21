@@ -371,9 +371,22 @@ module.exports = {
 # Git configuration
 Since Windows and Linux use different default line endings, Git may report a large number of modified files that have no differences aside from their line endings. To prevent this from happening, you can disable line ending conversion on the Windows side.
 
-[More Info](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)
+[More info](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)
 
-1. Avoid checking line endinges: In PowerShell As Admin:
+## Avoid checking line endinges:
+1. Run in PowerShell as Admin:
 ```
 git config --global core.autocrlf false
+```
+
+## Share git credentials between Windows and WSL
+[More info](https://code.visualstudio.com/docs/remote/troubleshooting#_sharing-git-credentials-between-windows-and-wsl)
+1. Run in PowerShell as Admin:
+```
+ git config --global credential.helper wincred
+```
+
+2. Run in Hyper
+```
+ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 ```
