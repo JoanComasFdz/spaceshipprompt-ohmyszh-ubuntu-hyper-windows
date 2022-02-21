@@ -368,6 +368,8 @@ module.exports = {
 6. Several pop ups will appear. Wait until all plugins are loaded, this can take some time.
 7. Close and open it again.
 
+---
+
 # Git configuration
 Since Windows and Linux use different default line endings, Git may report a large number of modified files that have no differences aside from their line endings. To prevent this from happening, you can disable line ending conversion on the Windows side.
 
@@ -391,16 +393,18 @@ git config --global core.autocrlf false
  git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 ```
 
-## Shortcuts
+---
 
-### Copy Paste
+# Shortcuts
+
+## Copy Paste
 * Copy: `[CONTROL]` + `[SHIFT]` + `[C]`
 * Paste: `[CONTROL]` + `[SHIFT]` + `[V]`
 
-### Search
+## Search
 * Search: `[CONTROL]` + `[SHIFT]` + `[F]`
 
-### Panes
+## Panes
 * New vertical pane on the right: `[CONTROL]` + `[SHIFT]` + `[D]`
 * New horizontal pane below: `[CONTROL]` + `[SHIFT]` + `[E]`
 * Close current pane: `[CONTROL]` + `[SHIFT]` + `[W]`
@@ -409,12 +413,18 @@ git config --global core.autocrlf false
 * Go to pane on the rifht: `[SHIFT]` + `[→]`
 * Go to pane on the left: `[SHIFT]` + `[←]`
 
-### Tabs
+## Tabs
 * New tab: `[CONTROL]` + `[SHIFT]` + `[T]`
 * Cycle tabs: `[CONTROL]` + `[TAB]`
 * Go to tab number: `[CONTROL]` + `[{number}]`
 
-### Window
+## Window
 * Quit: `[CONTROL]` + `[SHIFT]` + `[Q]` 
 * New window: `[CONTROL]` + `[SHIFT]` + `[M]`
 
+---
+
+# Get used to the command line
+Learn more about how to get most out of the CLI reading this awesome list of commands:
+
+[Github | You Don't Need GUI](https://github.com/you-dont-need/You-Dont-Need-GUI)
