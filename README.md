@@ -390,3 +390,31 @@ git config --global core.autocrlf false
 ```
  git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 ```
+
+## Shortcuts
+
+### Copy Paste
+* Copy: `[CONTROL]` + `[SHIFT]` + `[C]`
+* Paste: `[CONTROL]` + `[SHIFT]` + `[V]`
+
+### Search
+* Search: `[CONTROL]` + `[SHIFT]` + `[F]`
+
+### Panes
+* New vertical pane on the right: `[CONTROL]` + `[SHIFT]` + `[D]`
+* New horizontal pane below: `[CONTROL]` + `[SHIFT]` + `[E]`
+* Close current pane: `[CONTROL]` + `[SHIFT]` + `[W]`
+* Go to pane above: `[SHIFT]` + `[↑]`
+* Go to pane below: `[SHIFT]` + `[↓]`
+* Go to pane on the rifht: `[SHIFT]` + `[→]`
+* Go to pane on the left: `[SHIFT]` + `[←]`
+
+### Tabs
+* New tab: `[CONTROL]` + `[SHIFT]` + `[T]`
+* Cycle tabs: `[CONTROL]` + `[TAB]`
+* Go to tab number: `[CONTROL]` + `[{number}]`
+
+### Window
+* Quit: `[CONTROL]` + `[SHIFT]` + `[Q]` 
+* New window: `[CONTROL]` + `[SHIFT]` + `[M]`
+
