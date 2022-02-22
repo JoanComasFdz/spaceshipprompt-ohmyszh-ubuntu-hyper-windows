@@ -19,6 +19,11 @@ wsl sudo apt-get install -y zsh
 
 Write-Host "========================================="
 Write-Host "Installing Oh My Zsh in Ubuntu..."
+Write-Host "Answer Yes when asked."
+Write-Host "When the prompt is shown, write exit."
+Write-Host "Ok?"
+Write-Host "Press any key to continue"
+Read-Host
 Write-Host "========================================="
 cmd /c 'wsl sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
@@ -27,11 +32,18 @@ $ubuntuHomePath = '\\wsl$\Ubuntu\home\' + $ubuntuUserName
 $zshrcFilePath = $ubuntuHomePath + '\.zshrc'
 
 Write-Host "========================================="
-Write-Host "Installing SpaceShip Prompt in Ubuntu..."
+Write-Host "Cloning SpaceShip Prompt in Ubuntu..."
 Write-Host "========================================="
 cmd /c 'wsl git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1'
+
+Write-Host "========================================="
+Write-Host "Creating symlinc SpaceShip Prompt in Ubuntu..."
+Write-Host "========================================="
 cmd /c 'wsl ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"'
 
+Write-Host "========================================="
+Write-Host "Adding SpaceShip Prompt config in Ubuntu..."
+Write-Host "========================================="
 # Add empty new line at the end to make sure there are no syntax issues
 Add-Content -Path $zshrcFilePath -Value ""
 
@@ -65,6 +77,9 @@ SPACESHIP_CHAR_SUFFIX=" "
 '@
 Add-Content -Path $zshrcFilePath -Value $spaceshipZshConfig
 
+Write-Host "========================================="
+Write-Host "Reloading Zsh in Ubuntu..."
+Write-Host "========================================="
 # Load config into the shell
 cmd /c 'wsl source ~/.zshrc'
 
